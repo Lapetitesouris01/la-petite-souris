@@ -1,0 +1,75 @@
+{
+    "intro": "Je vais vous aider à mieux comprendre votre douleur dentaire. Répondez simplement à mes questions.",
+    "questions": [
+        {
+            "id": "Q1",
+            "text": "Ressentez-vous la douleur sur une seule dent bien localisée ?",
+            "options": {
+                "Oui": "Q2",
+                "Non": "END_DIFFUSE"
+            }
+        },
+        {
+            "id": "Q2",
+            "text": "La douleur est-elle présente même sans toucher ni utiliser la dent ? (douleur spontanée)",
+            "options": {
+                "Oui": "Q3",
+                "Non": "Q4"
+            }
+        },
+        {
+            "id": "Q3",
+            "text": "Est-ce une douleur pulsatile, comme si vous sentiez un cœur qui bat dans la dent ?",
+            "options": {
+                "Oui": "Q5",
+                "Non": "Q5"
+            }
+        },
+        {
+            "id": "Q4",
+            "text": "La douleur apparaît-elle uniquement dans certaines situations ?",
+            "options": {
+                "Froid / Chaud / Sucre / Mastication": "Q5"
+            }
+        },
+        {
+            "id": "Q5",
+            "text": "Depuis combien de temps la douleur est-elle présente ?",
+            "options": {
+                "Moins de 24h": "Q6",
+                "Plusieurs jours": "Q6",
+                "Plus d’une semaine": "Q6"
+            }
+        },
+        {
+            "id": "Q6",
+            "text": "La douleur s’intensifie-t-elle au froid ?",
+            "options": {
+                "Oui": "Q7",
+                "Non": "Q7"
+            }
+        },
+        {
+            "id": "Q7",
+            "text": "Avez-vous un gonflement visible d’un seul côté du visage (joue ou sous la mâchoire) ?",
+            "options": {
+                "Oui": "Q8",
+                "Non": "END_PULPITE"
+            }
+        },
+        {
+            "id": "Q8",
+            "text": "Présentez-vous au moins deux des signes suivants : fièvre, douleur à la palpation sous la mâchoire, difficulté à ouvrir la bouche ou avaler ?",
+            "options": {
+                "Oui": "END_URGENCE",
+                "Non": "END_ABSCES"
+            }
+        }
+    ],
+    "endings": {
+        "END_DIFFUSE": "Il semble que votre douleur soit diffuse. Nous allons vous orienter vers un autre questionnaire.",
+        "END_PULPITE": "Il se peut que vous souffriez d’une inflammation de la pulpe (pulpite). Évitez le froid et le chaud, et prenez un antalgique adapté (paracétamol si non contre-indiqué). Consultez un chirurgien-dentiste rapidement.",
+        "END_ABSCES": "Un abcès localisé est possible. Prenez rapidement rendez-vous chez un dentiste. Ne percez rien et ne prenez pas d’AINS sans avis médical.",
+        "END_URGENCE": "Ces signes peuvent indiquer une urgence vitale. Rendez-vous immédiatement dans un service d'urgence hospitalier."
+    }
+}
